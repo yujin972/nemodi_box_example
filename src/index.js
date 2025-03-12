@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { BufferGeometryUtils } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
-const container = document.querySelector('.three-wrap');
+const container = document.querySelector('.canvas-wrap');
 const boxCanvas = document.querySelector('#box-canvas');
 
 // 박스 파라미터와 요소들
@@ -181,7 +181,7 @@ function createBoxElements() {
 function loadTextures() {
 
     const defaultTexture = new THREE.TextureLoader();
-    const boxTexture = defaultTexture.load('./static/img/box.jpg');
+    const boxTexture = defaultTexture.load('/box_3d/ex/box.jpg');
 
     const material = new THREE.MeshStandardMaterial({ map: boxTexture, side: THREE.DoubleSide });
 
@@ -191,14 +191,14 @@ function loadTextures() {
 
     const textureLoader = new THREE.TextureLoader();
     const textures = {
-        front: textureLoader.load('./static/img/front.jpg'),// 앞면
-        back: textureLoader.load('./static/img/back.jpg'),// 뒷면
-        frontTop: textureLoader.load('./static/img/top01.jpg'),// 윗면01
-        backTop: textureLoader.load('./static/img/top02.jpg'),// 윗면02
-        frontBottom: textureLoader.load('./static/img/bottom01.jpg'),// 아랫면01
-        backBottom: textureLoader.load('./static/img/bottom02.jpg'),// 아랫면02
-        left: textureLoader.load('./static/img/left.jpg'),// 왼쪽
-        right: textureLoader.load('./static/img/right.jpg')// 오른쪽
+        front: textureLoader.load('/box_3d/ex/front.jpg'),// 앞면
+        back: textureLoader.load('/box_3d/ex/back.jpg'),// 뒷면
+        frontTop: textureLoader.load('/box_3d/ex/top01.jpg'),// 윗면01
+        backTop: textureLoader.load('/box_3d/ex/top02.jpg'),// 윗면02
+        frontBottom: textureLoader.load('/box_3d/ex/bottom01.jpg'),// 아랫면01
+        backBottom: textureLoader.load('/box_3d/ex/bottom02.jpg'),// 아랫면02
+        left: textureLoader.load('/box_3d/ex/left.jpg'),// 왼쪽
+        right: textureLoader.load('/box_3d/ex/right.jpg')// 오른쪽
     };
 
     const materials = {
