@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { BufferGeometryUtils } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
-const container = document.querySelector('.canvas-wrap');
+const container = document.querySelector('.box_3d');
 const boxCanvas = document.querySelector('#box-canvas');
 
 // 박스 파라미터와 요소들
