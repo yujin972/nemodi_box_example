@@ -31,8 +31,15 @@ let renderer, scene, camera, orbit, lightHolder;
 let textures = {}; // 텍스처를 저장할 객체
 
 // 앱 실행
-initScene();
-window.addEventListener('resize', updateSceneSize);
+document.addEventListener("DOMContentLoaded", function() {
+    if (container && boxCanvas) {
+        initScene();  // 초기화 함수
+        window.addEventListener('resize', updateSceneSize);  // 윈도우 크기 조정시 씬 업데이트
+    } else {
+        console.error('컨테이너나 캔버스 요소를 찾을 수 없습니다.');
+    }
+});
+
 
 // --------------------------------------------------
 // 씬 초기화
@@ -184,14 +191,14 @@ function loadTextures() {
 
     const textureLoader = new THREE.TextureLoader();
     const textures = {
-        front: textureLoader.load('./static/img/front.jpg'),// 앞면
-        back: textureLoader.load('./static/img/back.jpg'),// 뒷면
-        frontTop: textureLoader.load('./static/img/top01.jpg'),// 윗면01
-        backTop: textureLoader.load('./static/img/top02.jpg'),// 윗면02
-        frontBottom: textureLoader.load('./static/img/bottom01.jpg'),// 아랫면01
-        backBottom: textureLoader.load('./static/img/bottom02.jpg'),// 아랫면02
-        left: textureLoader.load('./static/img/left.jpg'),// 왼쪽
-        right: textureLoader.load('./static/img/right.jpg')// 오른쪽
+        front: textureLoader.load('/static/img/front.jpg'),// 앞면
+        back: textureLoader.load('/static/img/back.jpg'),// 뒷면
+        frontTop: textureLoader.load('/static/img/top01.jpg'),// 윗면01
+        backTop: textureLoader.load('/static/img/top02.jpg'),// 윗면02
+        frontBottom: textureLoader.load('/static/img/bottom01.jpg'),// 아랫면01
+        backBottom: textureLoader.load('/static/img/bottom02.jpg'),// 아랫면02
+        left: textureLoader.load('/static/img/left.jpg'),// 왼쪽
+        right: textureLoader.load('/static/img/right.jpg')// 오른쪽
     };
 
     const materials = {
