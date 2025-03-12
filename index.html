@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    	<link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    	<!--<link rel="stylesheet" href="static/styles/main.css">-->
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<title>3D 박스 구현</title>
+		<style>
+			.three-wrap { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+			.three-wrap canvas { touch-action: auto !important; display: block; }
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="content">
+				<div class="three-wrap">
+					<canvas id="box-canvas"></canvas>
+				</div>
+			</div>
+		</main>
+    	<script src="public/bundle.js"></script>
+	</body>
+</html>
